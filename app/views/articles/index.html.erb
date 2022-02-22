@@ -1,11 +1,23 @@
 <h1>Articles</h1>
 
+<div class="alert alert-primary" role="alert">
+  Check it out!
+
+<div class="alert alert-primary" role="alert">
+
+<button type="button" class="btn btn-success">Success</button>
+
+
+
 <ul>
 <% @articles.each do |article| %>
     <li>
-    <a href="/articles/<%= article.id %>">
-    <%= article.title %>
-    </a>
+    
+    <%= link_to article.title, article %>
     </li>
     <% end %>
     </ul>
+
+    <%= link_to "New Article", new_article_path %>
+
+    
